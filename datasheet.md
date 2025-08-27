@@ -82,3 +82,15 @@ vectores_propios = np.linalg.eig(a)
 print(vectores_propios)
 solucion = np.linalg.solve(a, np.array([5, 6]))
 print(solucion)
+
+import pandas as pd
+
+data = {
+    'Nombre': ['Ana', 'Luis', 'Carlos'],
+    'Edad': [23, 31, 29],
+    'Ciudad': ['Bogotá', 'Medellín', 'Cali']
+}
+
+df = pd.DataFrame(data)
+print(df)
+
