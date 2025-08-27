@@ -58,3 +58,27 @@ rango = np.arange(0,10,2)
 print(rango)
 linea = np.linspace(0,1,5)
 print(linea)
+
+#aleatorio
+
+np.random.seed(42)
+
+aleatorio_uniforme = np.random.rand(2, 2)
+print(aleatorio_uniforme)
+aleatorio_normal = np.random.randn(2, 2)
+print(aleatorio_normal)
+aleatorio_enteros = np.random.randint(0, 10, (2, 2))
+print(aleatorio_enteros)
+
+#algebre lineal
+
+a = np.array([[1,2], [3,4]])
+
+inversa = np.linalg.inv(a)
+print(inversa)
+determinante = np.linalg.det(a)
+print(determinante)
+vectores_propios = np.linalg.eig(a)
+print(vectores_propios)
+solucion = np.linalg.solve(a, np.array([5, 6]))
+print(solucion)
