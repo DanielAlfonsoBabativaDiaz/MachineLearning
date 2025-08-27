@@ -93,3 +93,21 @@ df = pd.DataFrame({
 
 filtro = df[df['Edad'] > 25]
 print(filtro)
+data = {
+    'Nombre': ['Ana', 'Luis', 'Carlos'],
+    'Edad': [23, 31, 29],
+    'Ciudad': ['Bogotá', 'Medellín', 'Cali']
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+edades = pd.Series([23, 31, 29], name='Edad')
+print(edades)
+print(df.head(2))
+print(df.dtypes)
+print(df['Nombre'])
+
+df_csv = pd.read_csv('archivo.csv')
+print(df_csv.head())
+
