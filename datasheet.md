@@ -85,6 +85,14 @@ print(solucion)
 
 import pandas as pd
 
+df = pd.DataFrame({
+    'Nombre': ['Ana', 'Luis', 'Carlos', 'Sofía'],
+    'Edad': [23, 31, 29, 22],
+    'Ciudad': ['Bogotá', 'Medellín', 'Cali', 'Bogotá']
+})
+
+filtro = df[df['Edad'] > 25]
+print(filtro)
 data = {
     'Nombre': ['Ana', 'Luis', 'Carlos'],
     'Edad': [23, 31, 29],
