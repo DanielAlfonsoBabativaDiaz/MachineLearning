@@ -36,3 +36,25 @@ arr3 = np.multiply (a,b)
 print(arr3)
 arr4 = np.divide (a,b)
 print(arr4)
+
+#estadisticas
+
+a = np.array ([1,2,3,4,5,6,7,8,9])
+
+arr = np.mean(a)
+print(arr)
+arr2 = np.std(a)
+print(arr2)
+arr3 = np.sum(a)
+print(arr3)
+arr4 = np.max(a)
+print(arr4)
+arr5 = np.min(a)
+print(arr5)
+
+#secuencias
+
+rango = np.arange(0,10,2)
+print(rango)
+linea = np.linspace(0,1,5)
+print(linea)
