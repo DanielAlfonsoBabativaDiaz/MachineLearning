@@ -94,3 +94,12 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
+edades = pd.Series([23, 31, 29], name='Edad')
+print(edades)
+print(df.head(2))
+print(df.dtypes)
+print(df['Nombre'])
+
+df_csv = pd.read_csv('archivo.csv')
+print(df_csv.head())
+
