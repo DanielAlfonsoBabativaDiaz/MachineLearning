@@ -82,3 +82,14 @@ vectores_propios = np.linalg.eig(a)
 print(vectores_propios)
 solucion = np.linalg.solve(a, np.array([5, 6]))
 print(solucion)
+
+import pandas as pd
+
+df = pd.DataFrame({
+    'Nombre': ['Ana', 'Luis', 'Carlos', 'Sofía'],
+    'Edad': [23, 31, 29, 22],
+    'Ciudad': ['Bogotá', 'Medellín', 'Cali', 'Bogotá']
+})
+
+filtro = df[df['Edad'] > 25]
+print(filtro)
