@@ -85,14 +85,6 @@ print(solucion)
 
 import pandas as pd
 
-df = pd.DataFrame({
-    'Nombre': ['Ana', 'Luis', 'Carlos', 'Sofía'],
-    'Edad': [23, 31, 29, 22],
-    'Ciudad': ['Bogotá', 'Medellín', 'Cali', 'Bogotá']
-})
-
-filtro = df[df['Edad'] > 25]
-print(filtro)
 data = {
     'Nombre': ['Ana', 'Luis', 'Carlos'],
     'Edad': [23, 31, 29],
@@ -104,10 +96,52 @@ print(df)
 
 edades = pd.Series([23, 31, 29], name='Edad')
 print(edades)
+
 print(df.head(2))
+
 print(df.dtypes)
+
 print(df['Nombre'])
 
 df_csv = pd.read_csv('archivo.csv')
 print(df_csv.head())
 
+
+import pandas as pd
+
+df = pd.DataFrame({
+    'Nombre': ['Ana', 'Luis', 'Carlos', 'Sofía'],
+    'Edad': [23, 31, 29, 22],
+    'Ciudad': ['Bogotá', 'Medellín', 'Cali', 'Bogotá']
+})
+
+filtro = df[df['Edad'] > 25]
+print(filtro)
+
+grupo = df.groupby('Ciudad')['Edad'].mean()
+print(grupo)
+
+df1 = pd.DataFrame({
+    'ID': [1, 2, 3],
+    'Producto': ['Lápiz', 'Cuaderno', 'Borrador']
+})
+
+df2 = pd.DataFrame({
+    'ID': [1, 2, 3],
+    'Precio': [1200, 3500, 800]
+})
+
+df_merged = pd.merge(df1, df2, on='ID')
+print(df_merged)
+
+df_nulls = pd.DataFrame({
+    'Nombre': ['Ana', 'Luis', None],
+    'Edad': [23, None, 29]
+})
+
+print(df_nulls.dropna())
+
+print(df_nulls.fillna({'Nombre': 'Desconocido', 'Edad': df_nulls['Edad'].mean()}))
+
+df.to_csv('datos.csv', index=False)
+df.to_excel('datos.xlsx', index=False)
